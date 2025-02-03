@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+    background-image: url("Background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 90%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    padding: 12px;
+    margin-block: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 90px;
+}
+
+.input-container input[type="text"] {
+    width: 70%;
+    border: 2px solid grey;
+}
+
+.input-container input[type="button"] {
+    background-color: slategrey;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 12px 20px;
+}
+
+.input-container input[type="button"]:hover {
+    background-color: darkgray;
+}
+
+ul {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+ul li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-block-end: 12px;
+    border-radius: 4px;
+    border: 0.125px solid lightblue;
+    padding: 8px 12px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.5s;
+}
+
+ul li:hover {
+    background-color: gray;
+}
+
+ul li p {
+    flex-grow: 1;
+    padding: 3px;
+}
+
+.delete-icon, .edit-icon { 
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    padding: 8px;
+} 
+
+h1 {
+    font-size: 2.5em;
+    background-color: #ADD8E6;
+    color: black;
+    border: 2px solid grey;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 5px #888888;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+    }
+
+    .input-container input[type="text"] {
+        width: 100%;
+    }
+
+    ul {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    body {
+        background-size: cover;
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-container input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .input-container input[type="button"] {
+        padding: 10px 15px;
+    }
+
+    ul li {
+        padding: 6px 10px;
+    }
+
+    ul li p {
+        font-size: 14px;
+    }
+
+    .delete-icon, .edit-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    body {
+        background-size: cover;
+        background-attachment: scroll;
+    }
+}
